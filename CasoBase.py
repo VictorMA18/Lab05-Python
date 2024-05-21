@@ -1,5 +1,7 @@
 import pygame
 from chessPictures import *
 from interpreter import draw
+from picture import *
 pygame.init()
-draw(knight)
+caballo = Picture(KNIGHT)
+draw(caballo.under(knight))

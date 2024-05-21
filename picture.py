@@ -27,17 +27,22 @@ class Picture:
     return Picture(None)
 
   def join(self, p):
-    """ Devuelve una nueva figura poniendo la figura del argumento 
-        al lado derecho de la figura actual """
-    return Picture(None)
+    nuevo = []
+    for x in range(len(self.img)):     # Iterar sobre los elementos de la imagen actual
+        nuevo.append(self.img[x] + p.img[x])
+    return nuevo
 
   def up(self, p):
     return Picture(None)
 
   def under(self, p):
-    """ Devuelve una nueva figura poniendo la figura p sobre la
-        figura actual """
-    return Picture(None)
+    nuevo = [] # Crear una nueva imagen con la concatenación de ambas
+    for x in range(len(self.img)):     # Iterar sobre los elementos de la imagen actual
+        nuevo.append(self.img[x])     # Copiar los elementos de la imagen actual
+    for y in range(len(p.img)):        # Iterar sobre los elementos de la imagen p
+        nuevo.append(p.img[y])  # Colocar los elementos de la imagen p debajo
+    return nuevo                       # Retornar la nueva imagen compuesta
+
   
   def horizontalRepeat(self, n):
     """ Devuelve una nueva figura repitiendo la figura actual al costado
