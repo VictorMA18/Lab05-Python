@@ -27,8 +27,8 @@ class Picture:
     return Picture(None)
 
   def join(self, p):
-      """ Devuelve una nueva figura poniendo la figura del argumento 
-          al lado derecho de la figura actual """
+    """ Devuelve una nueva figura poniendo la figura del argumento 
+        al lado derecho de la figura actual """
     return Picture(None)
 
   def up(self, p):
