@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1716411908 "/home/user/Lab05-Python/latex/github_report.tex" "github_report.pdf" "github_report" 1716411908
+["pdflatex"] 1716412470 "/home/user/Lab05-Python/latex/github_report.tex" "github_report.pdf" "github_report" 1716412470
   "/dev/null" 1716410094 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/etc/texmf/web2c/texmf.cnf" 1695244730 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/user/Lab05-Python/latex/github_report.tex" 1716411907 5416 62d36b93a6bacebd23db4905a951f3e0 ""
+  "/home/user/Lab05-Python/latex/github_report.tex" 1716412469 5416 62d36b93a6bacebd23db4905a951f3e0 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -95,10 +95,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1695244742 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1714196407 2799121 4e2511042be7bc5e9f4c5f197685c55d ""
-  "github_report.aux" 1716411908 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "github_report.aux" 1716412470 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
   "github_report.out" 0 -1 0 "pdflatex"
   "github_report.pyg" 1716404855 408 9ed8da1deddbc5eb787ee62f51f73255 ""
-  "github_report.tex" 1716411907 5416 62d36b93a6bacebd23db4905a951f3e0 ""
+  "github_report.tex" 1716412469 5416 62d36b93a6bacebd23db4905a951f3e0 ""
   "img/Ej1.png" 1716404960 163170 b0818c3d9ed9583315aef7823b73e9b5 ""
   "img/Ej2.png" 1716405852 166447 3ba54ea7f59748a983782d207c052220 ""
   "img/Ej3.png" 1716406106 109867 d562c679e3f4d6823ed6812651b81054 ""
