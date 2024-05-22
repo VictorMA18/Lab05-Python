@@ -25,12 +25,13 @@ class Picture:
     return Picture(nuevo)
 
   def negative(self):  
+    nuevo = []
     for x in range(len(self.img)):
       cadena = ""
       for y in range(len(self.img[x])):
         cadena += self._invColor(self.img[x][y])
-      self.img[x] = cadena
-    return self
+      nuevo.append(cadena)
+    return Picture(nuevo)
 
 
   def join(self, p):
@@ -48,7 +49,6 @@ class Picture:
           cadena += self.img[x][y]
         else: 
           cadena += p.img[x][y]
-      print(cadena)
       nuevo.append(cadena)
     return Picture(nuevo)
 

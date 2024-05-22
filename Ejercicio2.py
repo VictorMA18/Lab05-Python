@@ -9,5 +9,5 @@ for x in range(len(iteraciones)):
     if(x % 2 == 0):
         caballoblanco = caballoblanco.join(caballonegro)
     else:
-        caballoblanco = caballoblanco.under(caballoblanco.negative())
-draw(caballoblanco)
+        caballoblanco = caballoblanco.under(caballoblanco.verticalMirror())
+draw(caballoblanco) 
