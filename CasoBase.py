@@ -4,4 +4,5 @@ from interpreter import draw
 from picture import *
 pygame.init()
 caballo = Picture(KNIGHT)
-draw(caballo.under(knight))
+
+draw(caballo.negative())
