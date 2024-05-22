@@ -19,8 +19,10 @@ class Picture:
     return vertical
 
   def horizontalMirror(self):
-    """ Devuelve el espejo horizontal de la imagen """
-    return Picture(None)
+    nuevo = []
+    for x in range(len(self.img)):
+      nuevo.append(self.img[(len(self.img) - 1) - x])
+    return nuevo
 
   def negative(self):  
     for x in range(len(self.img)):
@@ -38,7 +40,17 @@ class Picture:
     return nuevo
 
   def up(self, p):
-    return Picture(None)
+    nuevo = []
+    for x in range(len(self.img)): 
+      cadena = ""
+      for y in range(len(self.img[x])):
+        if(self.img[x][y] != " "):
+          cadena += self.img[x][y]
+        else: 
+          cadena += p.img[x][y]
+      print(cadena)
+      nuevo.append(cadena)
+    return nuevo
 
   def under(self, p):
     nuevo = [] # Crear una nueva imagen con la concatenación de ambas
