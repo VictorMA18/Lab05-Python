@@ -6,4 +6,4 @@ pygame.init()
 caballo = Picture(KNIGHT)
 cawhite = Picture(SQUARE)
 
-draw(caballo.horizontalRepeat(1))
+draw(caballo.rotate().rotate().rotate().join(caballo.negative()))

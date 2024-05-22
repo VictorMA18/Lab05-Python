@@ -16,13 +16,13 @@ class Picture:
     vertical = []
     for value in self.img:
     	vertical.append(value[::-1])
-    return vertical
+    return Picture(vertical)
 
   def horizontalMirror(self):
     nuevo = []
     for x in range(len(self.img)):
       nuevo.append(self.img[(len(self.img) - 1) - x])
-    return nuevo
+    return Picture(nuevo)
 
   def negative(self):  
     for x in range(len(self.img)):
@@ -37,7 +37,7 @@ class Picture:
     nuevo = []
     for x in range(len(self.img)):     # Iterar sobre los elementos de la imagen actual
         nuevo.append(self.img[x] + p.img[x])
-    return nuevo
+    return Picture(nuevo)
 
   def up(self, p):
     nuevo = []
@@ -50,7 +50,7 @@ class Picture:
           cadena += p.img[x][y]
       print(cadena)
       nuevo.append(cadena)
-    return nuevo
+    return Picture(nuevo)
 
   def under(self, p):
     nuevo = [] # Crear una nueva imagen con la concatenación de ambas
@@ -58,7 +58,7 @@ class Picture:
         nuevo.append(self.img[x])     # Copiar los elementos de la imagen actual
     for y in range(len(p.img)):        # Iterar sobre los elementos de la imagen p
         nuevo.append(p.img[y])  # Colocar los elementos de la imagen p debajo
-    return nuevo                       # Retornar la nueva imagen compuesta
+    return Picture(nuevo)                       # Retornar la nueva imagen compuesta
 
   
   def horizontalRepeat(self, n):
@@ -68,7 +68,7 @@ class Picture:
     else:
       for x in range(len(self.img)): 
         nuevo.append(self.img[x] * n)
-      return nuevo
+      return Picture(nuevo)
 
   def verticalRepeat(self, n):
     nuevo = []
@@ -78,11 +78,15 @@ class Picture:
       for i in range(n):
         for x in range(len(self.img)): 
           nuevo.append(self.img[x])     
-      return nuevo
+      return Picture(nuevo)
 
   #Extra: Sólo para realmente viciosos 
-  def rotate(self):
-    """Devuelve una figura rotada en 90 grados, puede ser en sentido horario
-    o antihorario"""
-    return Picture(None)
+  def rotate(self): 
+    nuevo = []
+    for x in range(len(self.img)):
+      cadena = ""
+      for y in range(len(self.img[x])):
+        cadena += self.img[-y][x]
+      nuevo.append(cadena)
+    return Picture(nuevo)
 
