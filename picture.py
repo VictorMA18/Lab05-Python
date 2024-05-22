@@ -45,7 +45,7 @@ class Picture:
     for x in range(len(self.img)): 
       cadena = ""
       for y in range(len(self.img[x])):
-        if(self.img[x][y] != " "):
+        if(p.img[x][y] == " "):
           cadena += self.img[x][y]
         else: 
           cadena += p.img[x][y]
