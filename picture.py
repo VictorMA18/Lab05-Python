@@ -41,6 +41,14 @@ class Picture:
     return Picture(nuevo)
 
   def up(self, p):
+    nuevo = [] 
+    for x in range(len(p.img)):   
+        nuevo.append(p.img[x])    
+    for y in range(len(self.img)):  
+        nuevo.append(self.img[y]) 
+    return Picture(nuevo) 
+
+  def under(self, p):          
     nuevo = []
     for x in range(len(self.img)): 
       cadena = ""
@@ -51,15 +59,6 @@ class Picture:
           cadena += p.img[x][y]
       nuevo.append(cadena)
     return Picture(nuevo)
-
-  def under(self, p):
-    nuevo = [] # Crear una nueva imagen con la concatenación de ambas
-    for x in range(len(self.img)):     # Iterar sobre los elementos de la imagen actual
-        nuevo.append(self.img[x])     # Copiar los elementos de la imagen actual
-    for y in range(len(p.img)):        # Iterar sobre los elementos de la imagen p
-        nuevo.append(p.img[y])  # Colocar los elementos de la imagen p debajo
-    return Picture(nuevo)                       # Retornar la nueva imagen compuesta
-
   
   def horizontalRepeat(self, n):
     nuevo = []

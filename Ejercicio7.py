@@ -4,21 +4,51 @@ from interpreter import draw
 pygame.init()
 
 #OBJETOS NULOS
-tablabase = Picture("")
-board = Picture("")
+tabla_total = Picture("")
+tabla_base = Picture("")
+mitad_tabla = Picture("")
+pawns = Picture("")
+tabla_base_piezas = Picture("")
 
-#FILAS NECESARIAS
-white_pawns = square.join(square.negative()).horizontalRepeat(4).up(pawn.horizontalRepeat(8))
-black_pawns = square.join(square.negative()).horizontalRepeat(4).negative().up(pawn.negative().horizontalRepeat(8))
-white_back_rank = square.join(square.negative()).negative().horizontalRepeat(4).up(rock.join(knight).join(bishop).join(queen).join(king).join(bishop).join(knight).join(rock))
-black_back_rank = (square.join(square.negative()).horizontalRepeat(4)).up(white_back_rank.negative())
-tablabase = ((square.join(square.negative()).horizontalRepeat(4)).under(square.join(square.negative()).negative().horizontalRepeat(4))).verticalRepeat(2)
 
+#MAIN
+Fila_piezas = rock.join(knight).join(bishop).join(queen).join(king).join(bishop).join(knight).join(rock)
+
+for x in range(0,9):
+    if(x < 1):
+        pawns = pawns.up(pawn)
+    if(x > 1):
+        pawns = pawns.join(pawn)
+
+
+for x in range(0,4):
+    if(x < 1):
+        tabla_base = tabla_base.up(square.negative().join(square))
+    if(x >= 1):
+        tabla_base = tabla_base.join(square.negative().join(square))
+for i in range(0,1):
+    if(i % 2 == 0):
+        tabla_base = tabla_base.up(tabla_base.negative())
+    else:
+        tabla_base = tabla_base.up(tabla_base)
+
+tabla_base_piezas_arriba = tabla_base.under(pawns.negative().up(Fila_piezas.negative()))
+tabla_base_piezas_abajo = tabla_base.under(Fila_piezas.up(pawns))
+
+for x in range(0,4):
+    if(x < 1):
+        mitad_tabla = mitad_tabla.up(square.negative().join(square))
+    if(x >= 1):
+        mitad_tabla = mitad_tabla.join(square.negative().join(square))
+for i in range(0,2):
+    if(i % 2 == 0):
+        mitad_tabla = mitad_tabla.up(mitad_tabla.negative())
+    else:
+        mitad_tabla = mitad_tabla.up(mitad_tabla)
+        
 #BOARD 
-board = black_back_rank.under(board)
-board = board.under(black_pawns)
-board = board.under(tablabase)
-board = board.under(white_pawns)
-board = board.under(white_back_rank)
+tabla_total = tabla_total.up(tabla_base_piezas_abajo)
+tabla_total = tabla_total.up(mitad_tabla)
+tabla_total = tabla_total.up(tabla_base_piezas_arriba)
+draw(tabla_total)
 
-draw(board)

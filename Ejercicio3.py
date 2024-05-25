@@ -2,7 +2,11 @@ import pygame
 from chessPictures import *
 from interpreter import draw
 pygame.init()
-iteraciones = [1,2]
 reynablanca = Picture(QUEEN)
-reynablanca = reynablanca.horizontalRepeat(4)
-draw(reynablanca)
+null = Picture("")
+for x in range(0,5):
+    if(x < 1):
+        null = null.up(reynablanca)
+    if(x > 1):
+        null = null.join(reynablanca)
+draw(null)

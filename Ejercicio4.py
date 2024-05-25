@@ -3,7 +3,12 @@ from chessPictures import *
 from interpreter import draw
 pygame.init()
 fila = Picture(None)
+null = Picture("")
 casilleroblanco = Picture(SQUARE)
 casilleronegro = Picture(SQUARE).negative()
-fila = (casilleroblanco.join(casilleronegro)).horizontalRepeat(4)
-draw(fila) 
+for x in range(0,4):
+    if(x < 1):
+        null = null.up(casilleroblanco.join(casilleronegro))
+    if(x >= 1):
+        null = null.join(casilleroblanco.join(casilleronegro))
+draw(null) 
