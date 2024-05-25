@@ -3,11 +3,12 @@ from chessPictures import *
 from interpreter import draw
 pygame.init()
 iteraciones = [1,2]
+null = Picture("")
 caballoblanco = Picture(KNIGHT)
 caballonegro = Picture(KNIGHT).negative()
 for x in range(len(iteraciones)):
     if(x % 2 == 0):
-        caballoblanco = caballoblanco.join(caballonegro)
+        null = null.up(caballonegro.join(caballoblanco))
     else:
-        caballoblanco = caballoblanco.under(caballoblanco.negative())
-draw(caballoblanco)
+        null = null.up(caballoblanco.join(caballonegro))
+draw(null)
